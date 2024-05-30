@@ -27,7 +27,6 @@ const routes: Routes = [
       data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

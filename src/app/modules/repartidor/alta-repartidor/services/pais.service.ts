@@ -12,6 +12,7 @@ export class PaisService {
     'https://restcountries.com/v3.1/all?fields=flags,name,region';
 
   constructor(private http: HttpClient) {}
+  
 
   getPaises(): Observable<Pais[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(

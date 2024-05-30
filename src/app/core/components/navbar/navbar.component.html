@@ -17,7 +17,7 @@
           <li *ngIf="!(loggedUser | async)" class="nav-item">
             <a class="nav-link active" routerLink="login">Login</a>
           </li>
-          <!-- Add more nav items as needed -->
+          
   
           <li  *ngIf="loggedUser | async as user" class="nav-item">
             <a class="nav-link active" routerLink="repartidor/alta">Alta repartidor</a>

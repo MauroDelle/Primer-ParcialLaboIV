@@ -18,7 +18,9 @@ export class BienvenidaComponent {
     this.fetchUser();
 
   }
+  
 
+  
   fetchUser() {
     this.githubSvc.getUser().subscribe((userData) => {
       this.user = userData;

@@ -10,7 +10,6 @@ export class AuthService {
   async login(email: string, password: string) {
     try {
       const res = await this.afauth.signInWithEmailAndPassword(email, password);
-
       return res;
     } catch (error) {
       throw error;
