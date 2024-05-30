@@ -11,7 +11,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'login',
+    path: 'login',  
     loadChildren: () =>
       import('./modules/login/login.module').then(
         (m) => m.LoginModule
@@ -22,6 +22,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/repartidor/alta-repartidor/alta-repartidor.module').then(
         (m) => m.AltaRepartidorModule
+      ),
+      canActivate: [AuthGuard],
+      data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
+  },
+  {
+    path: 'repartidor/detalle',
+    loadChildren: () =>
+      import('./modules/repartidor/detalle-repartidor/detalle-repartidor.module').then(
+        (m) => m.DetalleRepartidorModule
       ),
       canActivate: [AuthGuard],
       data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
